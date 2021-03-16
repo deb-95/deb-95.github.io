@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter, FaInstagram } from "react-icons/fa"
 import siteConfig from '../../data/siteConfig'
 import { withPrefix } from "gatsby"
 import loadable from '@loadable/component'
@@ -24,11 +24,6 @@ const Separator = styled.hr`
 `
 
 const Home = ({ className, location }) => {
-  // validate siteConfig settings
-  if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
-    console.error('WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.');
-  }
-
   const title = siteConfig.siteTitle
   const { keywords } = siteConfig
   return (
@@ -64,6 +59,9 @@ const Home = ({ className, location }) => {
                 </a>}
                 {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
                   <FaEnvelope className="social-icon" size="32" />
+                </a>}
+                {siteConfig.social.instagram && <a className="social-link instagram" href={siteConfig.social.instagram}>
+                  <FaInstagram className="social-icon" size="32" />
                 </a>}
               </div>
             </Col>
@@ -129,5 +127,9 @@ export default styled(Home)`
 
   a.social-link.email:hover {
     color: #c23a2b;
+  }
+
+  a.social-link.instagram:hover {
+    color: #fda1aa;
   }
 `

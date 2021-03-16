@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa"
 import { config } from 'react-awesome-styled-grid';
 import siteConfig from '../../../data/siteConfig'
 
@@ -24,15 +24,17 @@ const Footer = ({ className }) => {
     twitter,
     linkedin,
     github,
+    instagram
   } = siteConfig.social
   return (
     <footer className={className}>
       {`© ${new Date().getFullYear()} ${siteConfig.authorName}`}
       <div>
         {github && <Link href={github} icon={FaGithub} />}
-        {twitter && <Link href={twitter} icon={FaTwitter} />}
         {linkedin && <Link href={linkedin} icon={FaLinkedin} />}
+        {instagram && <Link href={instagram} icon={FaInstagram} />}
       </div>
+      <div>Cover Photo by <a href="https://unsplash.com/@reo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Emre</a> on <a href="/s/photos/minimal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
     </footer>
   )
 }
@@ -47,6 +49,10 @@ export default styled(Footer)`
   margin: 0 auto;
   padding: 0 24px;
   background: ${({ theme }) => theme.colors.background};
+  
+  div > a {
+    color: red;
+  }
 
   ${props => config(props).media.sm`
     flex-direction: row;
