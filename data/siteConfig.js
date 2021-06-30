@@ -8,16 +8,16 @@ module.exports = {
   authorDescription: `Software developer since 2018, started studying as a self-taught programmer in January 2018 
     and attended a Java course (June 2018 - October 2018) that introduced me to the world of software development.<br/>
     After that I mainly worked as a Frontend developer with full-stack knowledges that allowed me to switch many projects
-    and study new technologies. I recently got into mobile development with Flutter by studying it in my spare time.
-    I love to travel, work out and study new things and of course I love coffee`,
+    and study new technologies. I recently got into mobile development with Flutter by studying it in my spare time and got a job as Mobile Developer.
+    I love to travel, work out and study new things.`,
   skills: [
     {
       name: 'Dart',
-      level: 70
+      level: 80
     },
     {
       name: 'Flutter',
-      level: 70
+      level: 80
     },
     {
       name: 'Javascript/Typescript',
@@ -45,14 +45,23 @@ module.exports = {
     },
   ],
   jobs: [
-    /* more jobs here */
+    {
+      company: "Crispy Bacon",
+      begin: {
+        month: 'may',
+        year: '2021'
+      },
+      duration: null,
+      occupation: "Mobile developer",
+      description: "Currently working as a Flutter Developer"
+    },
     {
       company: "ThinkOpen",
       begin: {
         month: 'mar',
         year: '2019'
       },
-      duration: null,
+      duration: "2 years",
       occupation: "Fullstack developer",
       description: "Worked as consultant for a big retail company on their internal apps for sales and risk monitoring"
   
